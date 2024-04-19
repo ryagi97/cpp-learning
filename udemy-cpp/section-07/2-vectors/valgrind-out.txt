@@ -1,86 +1,97 @@
-==20069== Memcheck, a memory error detector
-==20069== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==20069== Using Valgrind-3.15.0-608cb11914-20190413 and LibVEX; rerun with -h for copyright info
-==20069== Command: ./vectors-challenge
-==20069== Parent PID: 17947
-==20069== 
---20069-- 
---20069-- Valgrind options:
---20069--    --leak-check=full
---20069--    --show-leak-kinds=all
---20069--    --track-origins=yes
---20069--    --verbose
---20069--    --log-file=valgrind-out.txt
---20069-- Contents of /proc/version:
---20069--   Linux version 5.10.192-tegra (buildbrain@mobile-u64-6519-d7000) (aarch64-buildroot-linux-gnu-gcc.br_real (Buildroot 2020.08) 9.3.0, GNU ld (GNU Binutils) 2.33.1) #1 SMP PREEMPT Mon Feb 19 20:19:53 PST 2024
---20069-- 
---20069-- Arch and hwcaps: ARM64, LittleEndian, baseline
---20069-- Page sizes: currently 4096, max supported 65536
---20069-- Valgrind library directory: /usr/lib/aarch64-linux-gnu/valgrind
---20069-- Reading syms from /home/nvidia/github/ryagi97/cpp-learning/udemy-cpp/section-07/2-vectors/vectors-challenge
---20069--    object doesn't have a symbol table
---20069-- Reading syms from /usr/lib/aarch64-linux-gnu/ld-2.31.so
---20069--   Considering /usr/lib/debug/.build-id/55/94c839a6444a801e7610b1ba8de0896218ed3c.debug ..
---20069--   .. build-id is valid
---20069-- Reading syms from /usr/lib/aarch64-linux-gnu/valgrind/memcheck-arm64-linux
---20069--    object doesn't have a symbol table
---20069--    object doesn't have a dynamic symbol table
---20069-- Scheduler: using generic scheduler lock implementation.
---20069-- Reading suppressions file: /usr/lib/aarch64-linux-gnu/valgrind/default.supp
-==20069== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-20069-by-nvidia-on-???
-==20069== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-20069-by-nvidia-on-???
-==20069== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-20069-by-nvidia-on-???
-==20069== 
-==20069== TO CONTROL THIS PROCESS USING vgdb (which you probably
-==20069== don't want to do, unless you know exactly what you're doing,
-==20069== or are doing some strange experiment):
-==20069==   /usr/lib/aarch64-linux-gnu/valgrind/../../bin/vgdb --pid=20069 ...command...
-==20069== 
-==20069== TO DEBUG THIS PROCESS USING GDB: start GDB like this
-==20069==   /path/to/gdb ./vectors-challenge
-==20069== and then give GDB the following command
-==20069==   target remote | /usr/lib/aarch64-linux-gnu/valgrind/../../bin/vgdb --pid=20069
-==20069== --pid is optional if only one valgrind process is running
-==20069== 
---20069-- REDIR: 0x4019400 (ld-linux-aarch64.so.1:strlen) redirected to 0x580c5de8 (???)
---20069-- REDIR: 0x4018440 (ld-linux-aarch64.so.1:strcmp) redirected to 0x580c5e3c (???)
---20069-- REDIR: 0x4018330 (ld-linux-aarch64.so.1:index) redirected to 0x580c5e10 (???)
---20069-- Reading syms from /usr/lib/aarch64-linux-gnu/valgrind/vgpreload_core-arm64-linux.so
---20069--    object doesn't have a symbol table
---20069-- Reading syms from /usr/lib/aarch64-linux-gnu/valgrind/vgpreload_memcheck-arm64-linux.so
---20069--    object doesn't have a symbol table
---20069-- Reading syms from /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28
---20069--    object doesn't have a symbol table
---20069-- Reading syms from /usr/lib/aarch64-linux-gnu/libm-2.31.so
---20069--   Considering /usr/lib/debug/.build-id/db/1be0d702106fcd7cf5035d13554c4f950e7abd.debug ..
---20069--   .. build-id is valid
---20069-- Reading syms from /usr/lib/aarch64-linux-gnu/libgcc_s.so.1
---20069--    object doesn't have a symbol table
---20069-- Reading syms from /usr/lib/aarch64-linux-gnu/libc-2.31.so
---20069--   Considering /usr/lib/debug/.build-id/12/7e5908798b8d0ccc04f49933af3bef807f9e65.debug ..
---20069--   .. build-id is valid
---20069-- REDIR: 0x4bbbab0 (libc.so.6:memchr) redirected to 0x48346c8 (_vgnU_ifunc_wrapper)
---20069-- REDIR: 0x4bba8d8 (libc.so.6:strlen) redirected to 0x48346c8 (_vgnU_ifunc_wrapper)
---20069-- REDIR: 0x4bbad40 (libc.so.6:rindex) redirected to 0x484cc40 (rindex)
---20069-- REDIR: 0x4bb6420 (libc.so.6:malloc) redirected to 0x4849d18 (malloc)
---20069-- REDIR: 0x4bbbda0 (libc.so.6:memset) redirected to 0x48346c8 (_vgnU_ifunc_wrapper)
---20069-- REDIR: 0x4bc2f40 (libc.so.6:__GI_memset) redirected to 0x4850c50 (memset)
---20069-- REDIR: 0x4bc3680 (libc.so.6:__GI_strlen) redirected to 0x484d268 (__GI_strlen)
---20069-- REDIR: 0x4bbbb00 (libc.so.6:bcmp) redirected to 0x48504d8 (bcmp)
---20069-- REDIR: 0x4bba100 (libc.so.6:strcmp) redirected to 0x484e278 (strcmp)
---20069-- REDIR: 0x4928b30 (libstdc++.so.6:operator new(unsigned long)) redirected to 0x484a350 (operator new(unsigned long))
---20069-- REDIR: 0x4bbbc90 (libc.so.6:memmove) redirected to 0x48346c8 (_vgnU_ifunc_wrapper)
---20069-- REDIR: 0x4bc1dc0 (libc.so.6:__GI_memmove) redirected to 0x4851058 (__GI_memmove)
---20069-- REDIR: 0x4926950 (libstdc++.so.6:operator delete(void*)) redirected to 0x484b3b0 (operator delete(void*))
---20069-- REDIR: 0x4bbc390 (libc.so.6:memcpy) redirected to 0x48346c8 (_vgnU_ifunc_wrapper)
---20069-- REDIR: 0x4bc1dd0 (libc.so.6:__GI_memcpy) redirected to 0x484efb0 (__GI_memcpy)
---20069-- REDIR: 0x4bbbe60 (libc.so.6:mempcpy) redirected to 0x4851890 (mempcpy)
---20069-- REDIR: 0x4bb6a08 (libc.so.6:free) redirected to 0x484aeb0 (free)
-==20069== 
-==20069== HEAP SUMMARY:
-==20069==     in use at exit: 0 bytes in 0 blocks
-==20069==   total heap usage: 10 allocs, 10 frees, 73,840 bytes allocated
-==20069== 
-==20069== All heap blocks were freed -- no leaks are possible
-==20069== 
-==20069== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==29774== Memcheck, a memory error detector
+==29774== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==29774== Using Valgrind-3.15.0-608cb11914-20190413 and LibVEX; rerun with -h for copyright info
+==29774== Command: ./vectors-challenge
+==29774== Parent PID: 17947
+==29774== 
+--29774-- 
+--29774-- Valgrind options:
+--29774--    --leak-check=full
+--29774--    --show-leak-kinds=all
+--29774--    --track-origins=yes
+--29774--    --verbose
+--29774--    --log-file=valgrind-out.txt
+--29774-- Contents of /proc/version:
+--29774--   Linux version 5.10.192-tegra (buildbrain@mobile-u64-6519-d7000) (aarch64-buildroot-linux-gnu-gcc.br_real (Buildroot 2020.08) 9.3.0, GNU ld (GNU Binutils) 2.33.1) #1 SMP PREEMPT Mon Feb 19 20:19:53 PST 2024
+--29774-- 
+--29774-- Arch and hwcaps: ARM64, LittleEndian, baseline
+--29774-- Page sizes: currently 4096, max supported 65536
+--29774-- Valgrind library directory: /usr/lib/aarch64-linux-gnu/valgrind
+--29774-- Reading syms from /home/nvidia/github/ryagi97/cpp-learning/udemy-cpp/section-07/2-vectors/vectors-challenge
+--29774--    object doesn't have a symbol table
+--29774-- Reading syms from /usr/lib/aarch64-linux-gnu/ld-2.31.so
+--29774--   Considering /usr/lib/debug/.build-id/55/94c839a6444a801e7610b1ba8de0896218ed3c.debug ..
+--29774--   .. build-id is valid
+--29774-- Reading syms from /usr/lib/aarch64-linux-gnu/valgrind/memcheck-arm64-linux
+--29774--    object doesn't have a symbol table
+--29774--    object doesn't have a dynamic symbol table
+--29774-- Scheduler: using generic scheduler lock implementation.
+--29774-- Reading suppressions file: /usr/lib/aarch64-linux-gnu/valgrind/default.supp
+==29774== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-29774-by-nvidia-on-???
+==29774== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-29774-by-nvidia-on-???
+==29774== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-29774-by-nvidia-on-???
+==29774== 
+==29774== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==29774== don't want to do, unless you know exactly what you're doing,
+==29774== or are doing some strange experiment):
+==29774==   /usr/lib/aarch64-linux-gnu/valgrind/../../bin/vgdb --pid=29774 ...command...
+==29774== 
+==29774== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==29774==   /path/to/gdb ./vectors-challenge
+==29774== and then give GDB the following command
+==29774==   target remote | /usr/lib/aarch64-linux-gnu/valgrind/../../bin/vgdb --pid=29774
+==29774== --pid is optional if only one valgrind process is running
+==29774== 
+--29774-- REDIR: 0x4019400 (ld-linux-aarch64.so.1:strlen) redirected to 0x580c5de8 (???)
+--29774-- REDIR: 0x4018440 (ld-linux-aarch64.so.1:strcmp) redirected to 0x580c5e3c (???)
+--29774-- REDIR: 0x4018330 (ld-linux-aarch64.so.1:index) redirected to 0x580c5e10 (???)
+--29774-- Reading syms from /usr/lib/aarch64-linux-gnu/valgrind/vgpreload_core-arm64-linux.so
+--29774--    object doesn't have a symbol table
+--29774-- Reading syms from /usr/lib/aarch64-linux-gnu/valgrind/vgpreload_memcheck-arm64-linux.so
+--29774--    object doesn't have a symbol table
+--29774-- Reading syms from /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28
+--29774--    object doesn't have a symbol table
+--29774-- Reading syms from /usr/lib/aarch64-linux-gnu/libm-2.31.so
+--29774--   Considering /usr/lib/debug/.build-id/db/1be0d702106fcd7cf5035d13554c4f950e7abd.debug ..
+--29774--   .. build-id is valid
+--29774-- Reading syms from /usr/lib/aarch64-linux-gnu/libgcc_s.so.1
+--29774--    object doesn't have a symbol table
+--29774-- Reading syms from /usr/lib/aarch64-linux-gnu/libc-2.31.so
+--29774--   Considering /usr/lib/debug/.build-id/12/7e5908798b8d0ccc04f49933af3bef807f9e65.debug ..
+--29774--   .. build-id is valid
+--29774-- REDIR: 0x4bbbab0 (libc.so.6:memchr) redirected to 0x48346c8 (_vgnU_ifunc_wrapper)
+--29774-- REDIR: 0x4bba8d8 (libc.so.6:strlen) redirected to 0x48346c8 (_vgnU_ifunc_wrapper)
+==29774== 
+==29774== Process terminating with default action of signal 2 (SIGINT)
+==29774==    at 0x4009DE0: _dl_lookup_symbol_x (dl-lookup.c:841)
+==29774==    by 0x400B98F: elf_machine_rela (dl-machine.h:259)
+==29774==    by 0x400B98F: elf_dynamic_do_Rela (do-rel.h:137)
+==29774==    by 0x400B98F: _dl_relocate_object (dl-reloc.c:255)
+==29774==    by 0x4003DCF: dl_main (rtld.c:2265)
+==29774==    by 0x4015F0F: _dl_sysdep_start (dl-sysdep.c:252)
+==29774==    by 0x4001A5B: _dl_start_final (rtld.c:449)
+==29774==    by 0x4001D87: _dl_start (rtld.c:541)
+==29774==    by 0x4001107: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+==29774== Jump to the invalid address stated on the next line
+==29774==    at 0x500: ???
+==29774==  Address 0x500 is not stack'd, malloc'd or (recently) free'd
+==29774== 
+==29774== 
+==29774== Process terminating with default action of signal 11 (SIGSEGV)
+==29774==  Bad permissions for mapped region at address 0x500
+==29774==    at 0x500: ???
+==29774== 
+==29774== HEAP SUMMARY:
+==29774==     in use at exit: 0 bytes in 0 blocks
+==29774==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==29774== 
+==29774== All heap blocks were freed -- no leaks are possible
+==29774== 
+==29774== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==29774== 
+==29774== 1 errors in context 1 of 1:
+==29774== Jump to the invalid address stated on the next line
+==29774==    at 0x500: ???
+==29774==  Address 0x500 is not stack'd, malloc'd or (recently) free'd
+==29774== 
+==29774== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
