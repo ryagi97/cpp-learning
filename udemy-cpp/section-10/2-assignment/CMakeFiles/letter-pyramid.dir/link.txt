@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/letter-pyramid.dir/letter-pyramid.cpp.o  -o letter-pyramid 

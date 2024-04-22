@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/strings-challenge.dir/strings-challenge.cpp.o  -o strings-challenge 

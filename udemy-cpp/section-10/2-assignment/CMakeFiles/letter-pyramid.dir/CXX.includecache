@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/nvidia/github/ryagi97/cpp-learning/udemy-cpp/section-10/2-assignment/letter-pyramid.cpp
+iostream
+-
+string
+-
+algorithm
+-
+

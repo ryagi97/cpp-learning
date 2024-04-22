@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/nvidia/github/ryagi97/cpp-learning/udemy-cpp/section-10/1-challenge/strings-challenge.cpp
+iostream
+-
+string
+-
+
